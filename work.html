@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <!-- 搜索引擎切换 -->
+    <script>
+        function switchSearchEngine() {
+          var searchForm = document.getElementById("search-form");
+          var searchEngine = document.getElementById("search-engine").value;
+          var searchInput = document.getElementById("search-input");
+          if (searchEngine === "baidu") {
+            searchForm.action = "https://www.baidu.com/s";
+            searchInput.setAttribute("name", "wd");
+          } else if (searchEngine === "bing") {
+            searchForm.action = "https://www.bing.com/search";
+            searchInput.setAttribute("name", "q");
+          }else if (searchEngine === "runoob") {
+            searchForm.action = "https://www.runoob.com/";
+            searchInput.setAttribute("name", "s");
+          }else if (searchEngine === "quark") {
+            searchForm.action = "https://quark.sm.cn/s";
+            searchInput.setAttribute("name", "q");
+          }else if (searchEngine === "bilibili") {
+            searchForm.action = "https://search.bilibili.com/all";
+            searchInput.setAttribute("name", "keyword");
+          }else if (searchEngine === "douban") {
+            searchForm.action = "https://www.douban.com/search";
+            searchInput.setAttribute("name", "q");
+          }else if (searchEngine === "zhihu") {
+            searchForm.action = "https://www.zhihu.com/search";
+            searchInput.setAttribute("name", "q");
+          }else if (searchEngine === "baiduwenku") {
+            searchForm.action = "https://wenku.baidu.com/search";
+            searchInput.setAttribute("name", "word");
+          }else if (searchEngine === "wandoujia") {
+            searchForm.action = "https://www.wandoujia.com/search";
+            searchInput.setAttribute("name", "key");
+          }else if (searchEngine === "shoujizhiwang") {
+            searchForm.action = "https://wap.cnki.net/touch/web/article/Search";
+            searchInput.setAttribute("name", "kw");
+          }else if (searchEngine === "csdn") {
+            searchForm.action = "https://so.csdn.net/so/search";
+            searchInput.setAttribute("name", "spm");
+          }else if (searchEngine === "weibo") {
+            searchForm.action = "https://s.weibo.com/weibo";
+            searchInput.setAttribute("name", "q");
+          }else if (searchEngine === "baiduzhidao") {
+            searchForm.action = "https://zhidao.baidu.com/search";
+            searchInput.setAttribute("name", "word");
+          }else if (searchEngine === "yuanshen") {
+            searchForm.action = "https://www.miyoushe.com/ys/search";
+            searchInput.setAttribute("name", "keyword");
+          }
+
+        }
+    </script>
+  <style>
+    .word{
+      text-decoration: none;
+      font-size: 90%;
+      color: rgb(255, 119, 142);
+    }
+
+    .custom-list-container ul {
+              display: flex;
+              list-style: none;
+              margin-top: -20px;
+            }
+            .custom-list-container .hidden-list {
+              display: none;
+            }
+    #roll1 li,#roll2 li{
+      margin-right: 6px;
+      margin-top: 0%;
+    }
+    .custom-list-container ul +ul {
+  margin-top: -20px;
+}
+  
+  body{
+    background-color: #c0ebd7;
+  }
+  .web1 {
+    margin: 4px;
+    width: 5%;
+    border-style: solid;
+    border-color: #4CAF50;
+    border-radius:20px;} /* 快捷栏的图片 */
+      .me{
+        text-decoration:none;
+        color: green ;}
+      input[type=submit] {
+        border-style: solid;
+        background-color: #4CAF50;
+        color: white;
+        padding: 1%;
+        font-size: large;
+        border-color: green;
+        border-radius: 6px;}
+      input[type=text] {
+        font-size: large;
+        width: 40%;
+        border-style: solid;
+        padding: 1%;
+        border-color: #4CAF50;
+        border-radius: 6px;}
+      #search-engine{
+        font-size: large;
+        border-style: solid;
+        padding: 1%;
+        border-color: #4CAF50;
+        border-radius: 6px;}
+      input:focus{
+        outline: none;}
+      select:focus{
+        outline: none;}
+    
+        #content2, #content3 {
+      display: none;}
+    #nav ul {
+        list-style: none;}           
+    #nav li {
+    display: inline; margin: 20px;}  
+    .foot {
+            position: fixed;
+            bottom: 60px;
+            width: 100%;
+            height: 50px;
+            z-index: 9999;
+    }
+    #nav{
+      position: relative;
+      left: -58px;
+    }
+    .web2{
+    margin: 6px;
+    width: 1.68%;
+    position: relative;
+      left: -6px;
+  }
+   
+   </style>
+
+</head>
+<body>
+  <header>
+         <!-- 关于我的相关主页 --><p style="margin-top: 1px; font-size: 96%;">关于<img title="关于此网站的好多好多信息" width="10%" src="/files/tupian/dbxxc.png" alt="逗比小贤C"></p>
+         <div class="custom-list-container">
+          
+        
+          <div id="container">
+            <ul id="roll1">
+              <li><a class="word" style="color:rgb(98, 0, 255);" title="🏳️‍🌈" href="https://weibo.com/u/5462799814"><img width="12" src="/files/tupian/ICO/weibo.png" alt="">微博</a></li>
+              <li><a class="word" style="color:red" title="Red" href="https://space.bilibili.com/25767735/"><img width="12" src="/files/tupian/ICO/bilibili.png" alt="">B站</a></li>
+              <li><a class="word" style="color:orange" title="Orange" href="https://www.douyin.com/user/MS4wLjABAAAAb2wlYg7GeU61wt9PsaWbg6XX8-wn8GxZNCeLU1weidY"><img width="12" src="/files/tupian/ICO/douyin.png" alt="">抖音</a></li>
+              <li><a class="word" style="color:yellow;" title="Yellow" href="https://user.qzone.qq.com/2575574249"><img width="12" src="/files/tupian/ICO/qzore.png" alt="">Qzore</a></li>
+              <li><a class="word" style="color:green;" title="Green" href="https://instagram.com/doubixiaoxianc?igshid=MzNlNGNkZWQ4Mg=="><img width="12" src="/files/tupian/ICO/Instagram.png" alt="">Ins</a></li>
+              <li><a class="word" style="color:blue;" title="Blue" href="https://youtube.com/@DBXXC"><img width="12" src="/files/tupian/ICO/YouTube.png" alt="">YouTube</a></li>
+              <li><a class="word" style="color:purple;" title="Purple" href="https://twitter.com/DBXXC_Roy"><img width="12" src="/files/tupian/ICO/twitter.png" alt="">Twitter</a></li>
+              <li><a class="word" style="color:red;" title="🏳️‍⚧️" href="mailto:syq-tf@qq.com"><img width="14" src="/files/tupian/ICO/email.png" alt="">Email</a></li>
+            </ul>
+        
+            <ul id="roll2" class="hidden-list">
+              <li title="💖" style="color: pink;">❤</li>
+              <li><a class="word" title="☺️" href="https://weibo.com/u/7771031543"><img width="12" src="/files/tupian/ICO/weibo.png" alt="">微博</a></li>
+              <li><a class="word" title="🤗" href="https://space.bilibili.com/394986841"><img width="12" src="/files/tupian/ICO/bilibili.png" alt="">B站</a></li>
+              <li><a class="word" title="😝" href="https://v.douyin.com/iqf9R26/"><img width="12" src="/files/tupian/ICO/douyin.png" alt="">抖音</a></li>
+              <li><a class="word" title="😄" href="https://linannian17334.lofter.com"><img width="12" src="/files/tupian/ICO/lofter.png" alt="">Lofter</a></li>
+              <li><a class="word" title="😋" href="https://www.xiaohongshu.com/user/profile/5d3bca18000000001601e4a1"><img width="12" src="/files/tupian/ICO/xiaohongshu.png" alt="">小红书</a></li>
+              <li title="💖" style="color: pink;">❤</li>
+            </ul>
+          </div>
+        
+          <script>
+            var roll1Items = document.querySelectorAll("#roll1 li");
+            var roll2 = document.getElementById("roll2");
+        
+            for (var i = 0; i < roll1Items.length; i++) {
+              roll1Items[i].addEventListener("mouseover", function() {
+                roll2.style.display = "flex";
+              });
+        
+              roll1Items[i].addEventListener("mouseleave", function() {
+                roll2.style.display = "flex";
+              });
+            }
+          </script>
+        </div>
+
+
+    <!-- <p > 
+      ABOUT 逗比小贤C:
+      <br>
+      <a class="me" target="_blank" href="">微博</a>
+      <a class="me" target="_blank" href="">抖音</a>
+      <a class="me" >邮箱</a>
+      <a class="me" target="_blank" href="">Bilibili</a>
+      <a class="me" target="_blank" href="">Instagram</a>
+      <a class="me" target="_blank" href="">YouTube</a>
+      <a class="me" target="_blank" href="">Twitter</a>
+    </p> -->
+  </header>
+<br><br><center>
+
+<!-- 主页的图片 -->
+<p>
+    <img title="没错 It's me!!!!🤪🤪🤪" src="/files/tupian/dbxxc20.png" alt="my boy" width=30%>
+</p>
+<!-- 这个是搜索引擎 -->
+<p>
+<!-- <input type="search" name="test" placeholder="搜你想搜">(暂未开发搜索功能) -->
+  <!-- <form action="https://www.baidu.com/s" method="get">
+    <input type="text" name="wd" placeholder="搜你想搜" />
+    <input type="submit" value="搜索" />
+  </form> -->
+  <form id="search-form" method="get" action="https://www.bing.com/search" >
+    <select title="超级丰富的搜索选项" id="search-engine"  onchange="switchSearchEngine()">
+      <option value="bing">必应</option>
+      <option value="baidu">百度</option>
+      <option value="runoob">菜鸟</option>
+      <option value="quark">夸克</option>
+      <option value="bilibili">B站</option>
+      <option value="douban">豆瓣</option>
+      <option value="zhihu">知乎</option>
+      <option value="baiduwenku">百度文库</option>
+      <option value="wandoujia">豌豆荚</option>
+      <option value="shoujizhiwang">手机知网</option>
+      <option value="csdn">CSND</option>
+      <option value="weibo">微博</option>
+      <option value="baiduzhidao">百度知道</option>
+      <option value="yuanshen">米游社.原神</option>
+    </select>
+    <input title="恭喜你发现了" type="text" id="search-input" placeholder="搜你想搜(在各种各样的图标停留会有彩蛋🤪)" name="q"/>
+    <input title="彩蛋" type="submit" value="R" />
+  </form>
+
+</p>
+<!-- 快捷网址 -->
+<p>
+    <!-- 快捷网址 暂时只有字 -->
+    <div class="container">
+    <div>
+      <a href="https://sso.unipus.cn/"><img title="U校园(学习英语的地方儿~)" class="web1" src="/files/tupian/Uxiaoyuan.png" alt="U校园" ></a>
+      <a href="https://www.aliyundrive.com/sign/in "><img title="阿里云盘(也能看片)" class="web1" src="/files/tupian/alyunpan.png" alt="阿里云盘" ></a>
+      <a href="https://home.miui.com/"><img title="MIUI(让每个人都能享受科技的乐趣)" class="web1" src="/files/tupian/miui.png" alt="MIUI" ></a>
+      <a href="https://ehall.xjau.edu.cn/"><img title="新疆农业大学教务系统" class="web1" src="/files/tupian/xjau.png" alt="新疆农业大学" ></a>
+      <a href="http://one.qhnu.edu.cn/"><img class="web1" title="青海师范大学教务系统" src="/files/tupian/qhnu.png" alt="青海师范大学身份统一认证" ></a> 
+      <a href="http://jwxt.nyist.edu.cn/"><img class="web1" title="南阳理工学院教务系统" src="/files/tupian/nyist.png" alt="南阳理工学院" ></a> 
+      <a href="https://www.mi.com/"><img class="web1" title="小米商城(想买就买)" src="/files/tupian/mistore.png" alt="小米商城" ></a> 
+      <a href="https://www.kdocs.cn/"><img class="web1" title="金山文档(云端WPS)" src="/files/tupian/wps.png" alt="金山文档" ></a> 
+      <a href="http://i.mooc.chaoxing.com/"><img class="web1" title="超星学习通(学习的好地儿)" src="/files/tupian/xuexitong.png" alt="超星学习通" ></a>      
+    </div>
+    <div class="container">
+      <a href="https://onlineweb.zhihuishu.com/onlinestuh5"><img title="智慧树知到学习平台(超级好学)" class="web1" src="/files/tupian/zhidao.png" alt="智慧树知到" ></a>
+      <a href="https://www.jd.com/"><img title="京东购物平台(买买买)" class="web1" src="/files/tupian/jd.png" alt="京东" ></a>
+      <a href="https://www.weibo.com"><img title="新浪微博(热门都在这里)" class="web1" src="/files/tupian/weibo.png" alt="微博" ></a>
+      <a href="https://www.bilibili.com/ "><img title="小破站(shushu没m?)" class="web1" src="/files/tupian/bilibili.png" alt="Bilibili" ></a> 
+      <a href=""><img title="畅玩Flash(自制!!!)" class="web1" src="/files/tupian/4399.png" alt="Flush" ></a>
+      <a href="https://www.douyin.com"><img title="抖音 浪费美好生活(bushi)" class="web1" src="/files/tupian/douying.png" alt="抖音" ></a> 
+      <a href="https://www.douban.com/ "><img title="豆瓣(好片此处寻)" class="web1" src="/files/tupian/douban.png" alt="豆瓣" ></a> 
+      <a href="https://www.taobao.com/"><img title="淘宝,淘不到一点宝" class="web1" src="/files/tupian/taobao.png" alt="淘宝" ></a> 
+      <a href="https://vidhub.cc/"><img title="看片的好地方(嘻嘻嘻)" class="web1" src="/files/tupian/vidhub.png" alt="VidHub" ></a>      
+      </div>
+    </div>
+
+</p>
+<footer class="foot">
+
+
+  <!-- <div id="content" onmouseover="showImage()" onmouseleave="hideImage()">
+    触摸此处显示图片
+  </div>
+  
+  <script>
+    function showImage() {
+      var content = document.getElementById("content");
+      content.innerHTML = '<img src="image.jpg" alt="图片">';
+    }
+  
+    function hideImage() {
+      var content = document.getElementById("content");
+      content.innerHTML = '触摸此处显示图片';
+    }
+  </script> -->
+<!-- 此处是公众号相关内容 -->
+
+
+  <!-- ROY -->
+  <!-- <p>
+    源力来袭<br><br>
+    <a href="https://weibo.com/tfwangyuan"><img src="" alt="微博"></a>
+    <a href="https://space.bilibili.com/1025115216"><img src="" alt="B站"></a>
+    <a href="https://www.douyin.com"><img src="" alt="抖音"></a>
+    <a href="https://www.xiaohongshu.com/user/profile/6131f7f0000000001f03cb4d"><img src="" alt="小红书"></a>
+    <a href="https://weibo.com/6353282636?refer_flag=1001030103_"><img src="" alt="工作室微博"></a>
+  </p>  -->
+   <div id="content1" >
+    <a href="https://troyesivan.com"><img title="欢迎来到戳爷的官网,可以直接访问哦!" class="web2" src="/files/tupian/ICO/troye.png" alt="Troye Sivan官网"></a>
+    <a href="https://weibo.com/u/6700964291"><img title="这里是戳爷的微博" class="web2" src="/files/tupian/ICO/weibo.png" alt="Troye Sivan微博"></a>
+    <a href="https://space.bilibili.com/3494373352278357"><img title="这是戳爷的B站" class="web2" src="/files/tupian/ICO/bilibili.png" alt="Troye Sivan哔哩哔哩"></a>
+    <a href="https://v.douyin.com/iqfmeWj/"><img title="这是戳爷的中国抖音,就像朋友圈一样,什么都在里面说"  class="web2" src="/files/tupian/ICO/douyin.png" alt="Troye Sivan抖音"></a>
+    <a href="https://y.qq.com/n/ryqq/singer/004LhKMW2CWJox"><img title="来QQ音乐听戳爷的音乐吧" class="web2" src="/files/tupian/ICO/qqmusic.png" alt="Troye SivanQQ音乐"></a>
+    <a href="https://music.163.com/#/artist?id=45129"><img title="来网易云音乐听戳爷的音乐吧" class="web2" src="/files/tupian/ICO/wyyyy.png" alt="Troye Sivan网易云音乐"></a>
+    <a href="https://www.kugou.com/singer/info/56T9KB99938F2/"><img title="来酷狗音乐听戳爷的音乐吧" class="web2" src="/files/tupian/ICO/kwmusic.png" alt="Troye Sivan酷狗音乐"></a>
+    <a href="https://open.spotify.com/artist/3WGpXCj9YhhfX11TToZcXP"><img title="戳爷的Spotify频道,海外听歌就选它!" class="web2" src="/files/tupian/ICO/spotify.png" alt="Troye Sivan Spotify"></a>
+    <a href="https://instagram.com/troyesivan"><img title="戳爷的Instagram(需要借助魔法)" class="web2" src="/files/tupian/ICO/Instagram.png" alt="Troye Sivan Instagram"></a>
+    <a href="https://www.youtube.com/channel/UCWcrr8Q9INGNp-PTCLTzc8Q"><img title="戳爷的起点YouTube视频博主" class="web2" src="/files/tupian/ICO/YouTube.png" alt="Troye Sivan YouTube"></a>
+   </div>
+  <div id="content2" >    
+    <a href="https://weibo.com/u/6353282636"><img title="王源工作室官方微博,帅哥在里看" class="web2" src="/files/tupian/ICO/roy.png" alt="王源工作室微博"></a>
+    <a href="https://weibo.com/tfwangyuan"><img title="王源个人微博,超多互动等你发现" class="web2" src="/files/tupian/ICO/weibo.png" alt="王源微博"></a>
+    <a href="https://space.bilibili.com/1025115216 "><img title="看王源高画质的MV等视频就上B站" class="web2" src="/files/tupian/ICO/bilibili.png" alt="王源哔哩哔哩"></a>
+    <a href="https://v.douyin.com/iqfTN3T/ "><img title="美好从源哥新的抖音开始" class="web2" src="/files/tupian/ICO/douyin.png" alt="王源抖音"></a>
+    <a href="https://www.xiaohongshu.com/user/profile/6131f7f0000000001f03cb4d"><img title="山城客厅,源哥等你来做客" class="web2" src="/files/tupian/ICO/xiaohongshu.png" alt="王源小红书"></a>
+    <a href="https://y.qq.com/n/ryqq/singer/000IBYF50SRnXP"><img title="听海量王源正版音乐,就上QQ音乐(还可以看独家海边演唱会哦!!!)" class="web2" src="/files/tupian/ICO/qqmusic.png" alt="王源QQ音乐"></a>
+    <a href="https://music.163.com/#/artist?id=956386"><img title="现在也可以在网易云音乐听王源唱歌了!!!" class="web2" src="/files/tupian/ICO/wyyyy.png" alt="王源网易云音乐"></a>
+    <a href="https://www.kugou.com/singer/info/4PJFKBFDCE775/"><img title="酷狗音乐,畅听王源" class="web2" src="/files/tupian/ICO/kwmusic.png" alt="王源酷狗音乐"></a>
+    <a href="https://open.spotify.com/artist/5pIP5Dcs2JMwHKmChLxyit"><img title="Spotify海外也可以音源不断" class="web2" src="/files/tupian/ICO/spotify.png" alt="王源Spotify"></a>
+    <a href="https://instagram.com/roy_____wang"><img title="源哥在Instagram里带你环游全世界!!!" class="web2" src="/files/tupian/ICO/Instagram.png" alt="王源Instagram"></a>
+  </div>
+  <div id="content3" >
+    <a href="https://vsinger.com/vsinger"><img title="Vsinger官网里的天依会是什么样呢?" class="web2" src="/files/tupian/ICO/lty1.png" alt="洛天依官网"></a>
+    <a href="https://space.bilibili.com/36081646"><img title="超多好听好看的天依原创音乐尽在劈里啪啦" class="web2" src="/files/tupian/ICO/bilibili.png" alt="洛天依哔哩哔哩"></a>
+    <a href="https://weibo.com/u/5146173015"><img clas title="洛天依的官方微博" class="web2" src="/files/tupian/ICO/weibo.png" alt="洛天依微博"></a>
+    <a href="https://v.douyin.com/iqfm3Fn/"><img title="短视频的天依会是什么样呢?" class="web2" src="/files/tupian/ICO/douyin.png" alt="洛天依抖音"></a>
+    <a href="https://y.qq.com/n/ryqq/singer/003ktdcg3E4kaG"><img title="上QQ音乐听天籁之音" class="web2" src="/files/tupian/ICO/qqmusic.png" alt="洛天依QQ音乐"></a>
+    <a href="https://music.163.com/#/artist?id=906118"><img title="许多P主都往网易云音乐里上传洛天依原创的超好听歌曲" class="web2" src="/files/tupian/ICO/wyyyy.png" alt="洛天依网易云音乐"></a>
+    <a href="https://www.kugou.com/singer/info/2MR8K3FE52FC5/"><img title="酷狗音乐也可听天依歌唱" class="web2" src="/files/tupian/ICO/kwmusic.png" alt="洛天依酷狗音乐"></a>
+    <!-- <a href=""><img src="" alt=""></a> -->
+  </div>
+
+  <ul id="nav">
+    <li id="list1"><img title="Troye Sivan(戳爷)是澳大利亚歌手,代表作Rush,Bloom,Youth,for him." height="28px" src="/files/tupian/ICO/troyesivan.png" alt="Troye Sivan"></li>
+    <li id="list2"><img title="王源 三登联合国,人民日报作家,Z时代唱作歌手 代表作 一样,十七,客厅狂欢,流星也为你落下来了" height="28px" src="/files/tupian/ICO/roy666.png" alt="Roy Wang"></li>
+    <li id="list3"><img title="洛天依 中国最早的虚拟歌姬,与王源一同上过央视春晚,代表作 普通DISCO,达拉崩吧,霜雪千年,东京不太热,勾指起誓" height="28px" src="/files/tupian/ICO/luotianyi.png" alt="Luo TianYi"></li>
+  </ul>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var listItems = document.querySelectorAll('#nav li');
+      var contents = document.querySelectorAll('#content1, #content2, #content3');
+      var roll1 = document.getElementById('roll1');
+      var roll2 = document.getElementById('roll2');
+  
+      for (var i = 0; i < listItems.length; i++) {
+        listItems[i].addEventListener('mouseover', function() {
+          var id = this.id;
+          for (var j = 0; j < contents.length; j++) {
+            var contentId = contents[j].getAttribute('id');
+            if (contentId !== 'content1' && contentId !== 'content2' && contentId !== 'content3') {
+              continue;
+            }
+            contents[j].style.display = 'none';
+          }
+          document.getElementById('content' + id.slice(-1)).style.display = 'block';
+          roll2.style.display = 'flex';
+        });
+      }
+  
+      roll1.style.display = 'flex';
+      roll2.style.display = 'none';
+      document.getElementById('content2').style.display = 'block';
+      document.getElementById('content1').style.display = 'none';
+      document.getElementById('content3').style.display = 'none';
+    });
+  </script>
+
+  <!-- <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var listItems = document.querySelectorAll('li');
+      var contents = document.querySelectorAll('div');
+      for (var i = 0; i < listItems.length; i++) {
+        listItems[i].addEventListener('mouseover', function() {
+          var id = this.id;
+          for (var j = 0; j < contents.length; j++) {
+            var contentId = contents[j].getAttribute('id');
+             if (contentId !== 'content1' && contentId !== 'content2' && contentId !== 'content3') {
+              continue;
+        }
+            contents[j].style.display = 'none';
+          }
+          document.getElementById('content' + id.slice(-1)).style.display = 'block';
+        });
+      }
+      document.getElementById('content2').style.display = 'block';
+      document.getElementById('content1').style.display = 'none';
+      document.getElementById('content3').style.display = 'none';
+    });
+    
+  </script> -->
+</footer>
+
+</center>
+</body>
+</html>
